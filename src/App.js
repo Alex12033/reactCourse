@@ -1,10 +1,31 @@
-import ExpenseItem from "./components/ExpenseItem";
+import Expenses from "./components/Expenses";
 
-const App = props => {
+function App() {
+  const expenses = [
+    {
+      id: "e1",
+      title: "Car insurance",
+      amount: 1.2,
+      date: new Date(2022, 2, 28),
+    },
+    {
+      id: "e2",
+      title: "New tv",
+      amount: 2,
+      date: new Date(2022, 2, 28),
+    },
+    {
+      id: "e3",
+      title: "New car",
+      amount: 2223,
+      date: new Date(2022, 2, 28),
+    },
+  ];
+
   return (
     <div>
       <h3>Lets get started</h3>
-      <ExpenseItem></ExpenseItem>
+      <Expenses items={expenses}/>
     </div>
   );
 }
